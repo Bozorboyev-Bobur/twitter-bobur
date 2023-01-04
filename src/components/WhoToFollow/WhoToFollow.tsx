@@ -76,8 +76,6 @@ export const WhoToFollow = () => {
                     </ul>
                 </footer>
             </div>
-            <div className={styles.whoToFollowBg}>
-            </div>
         </>
     )
 }

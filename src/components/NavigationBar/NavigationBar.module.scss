@@ -201,6 +201,10 @@ $outline-color_2: #e4e4e4;
             border-color: $border-color_1;
         }
     }
+
+    &:nth-child(3) {
+        display: none;
+    }
 }
 
 .headerNavMenuItem {
@@ -474,6 +478,19 @@ $outline-color_2: #e4e4e4;
         padding: 8px;
     }
 }
+
+@media only screen and (max-width: 1004px) {
+    .headerNavMenuLink {
+        &:nth-child(2) {
+            display: none;
+        }
+
+        &:nth-child(3) {
+            display: flex;
+        }
+    }
+}
+
 
 @media only screen and (max-width: 704px) {
     .headerNav {

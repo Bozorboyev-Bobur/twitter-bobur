@@ -9,56 +9,10 @@ $color_5: rgb(83, 100, 113);
 $color_6: #e7e9ea;
 $color_7: #71767b;
 
-.sideBar {
-	position: relative;
-	display: flex;
-	justify-content: flex-start;
-	min-height: 100%;
-}
-
-.sideBarScroll {
-	width: 100%;
-	max-width: 350px;
-	margin: 0 48px 0 36px;
-	position: fixed;
-	top: 0;
-	overflow-y: auto;
-	min-height: 100%;
-
-	&::-webkit-scrollbar {
-		display: none;
-	}
-}
-
-.sideBarContainer {
-	position: absolute;
-	top: 0;
-}
-
-.sideBarContent {
-	margin-top: 65px;
-	padding-bottom: 72px;
-}
-
-.sideBarBg {
-	min-width: 350px;
-	min-height: 100%;
-	background: transparent;
-	margin: 0 48px 0 36px;
-}
-
-.sideBarHeader {
-	width: 100%;
-	position: fixed;
-	max-width: 350px;
-	background: #fff;
-	height: 65px;
-	padding-top: 8px;
-}
-
 .sideBarSearchContainer {
 	width: 100%;
 	height: 55px;
+    position: relative;
 }
 
 .sideBarSearchBox {
@@ -257,10 +211,6 @@ $color_7: #71767b;
 		caret-color: #e7e9ea;
 	}
 
-	.sideBarHeader {
-		background: #000;
-	}
-
 	.sideBarSearchInput {
 		color: $color_1;
 
@@ -303,24 +253,9 @@ $color_7: #71767b;
 }
 
 @media only screen and (max-width: 1094px) {
-	.sideBarScroll {
-		max-width: 290px;
-	}
-
-	.sideBarHeader {
-		max-width: 290px;
-	}
-
-	.sideBarBg {
-		max-width: 290px;
-		margin: 0 0 36px 0;
-	}
 }
 
 @media only screen and (max-width: 1004px) {
-	.sideBar {
-		display: none;
-	}
 }
 
 @media only screen and (max-width: 499px) {

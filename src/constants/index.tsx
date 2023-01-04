@@ -1,9 +1,3 @@
-import styles from '../components/AddingTweet/AddingTweet.module.scss'
-
-export const CODE_PREFIX = [
-
-]
-
 export const LOGIN_CONFIG = [
     {
         label: 'About',
@@ -82,6 +76,11 @@ export const NAVBAR_CONFIG = [
     {
         img: < Icon icon={"mingcute:hashtag-line"} width='28' height='28' />,
         label: 'Explore',
+        link: 'explore',
+    },
+    {
+        img: <Icon icon="ri:search-line" width='26' height='26' />,
+        label: '',
         link: 'explore',
     },
     {

@@ -6,6 +6,10 @@ import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { TrendsForYou } from '../TrendsForYou'
 import { Icon } from '@iconify/react'
+import db from '../../../db.json'
+import ConnectCards from '../ConnectCards/ConnectCards'
+import router from 'next/router'
+import { SearchTweet } from '../SearchTweet'
 
 export const SideBar = () => {
     return (
@@ -13,14 +17,7 @@ export const SideBar = () => {
             <div className={styles.sideBarScroll}>
                 <div className={styles.sideBarContainer}>
                     <header className={styles.sideBarHeader}>
-                        <div className={styles.sideBarSearchContainer}>
-                            <div className={styles.sideBarSearchBox}>
-                                <div className={styles.sideBarSearchImg}>
-                                    <Icon icon="ri:search-line" color="#71767b" />
-                                </div>
-                                <input type="search" className={styles.sideBarSearchInput} placeholder='Search Twitter' />
-                            </div>
-                        </div>
+                        <SearchTweet />
                     </header>
                     <div className={styles.sideBarContent}>
                         <TrendsForYou />

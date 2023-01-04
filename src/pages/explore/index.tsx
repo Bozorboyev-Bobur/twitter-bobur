@@ -7,6 +7,9 @@ import styles from '../../../styles/explore.module.scss'
 import React, { useState } from 'react'
 import { Tweet } from '../../typings'
 import { AddingTweet } from "../../components/AddingTweet"
+import { WhoToFollow } from "../../components/WhoToFollow"
+import { SearchTweet } from "../../components/SearchTweet"
+import { TrendsForYou } from "../../components/TrendsForYou"
 
 interface Props {
     tweets: Tweet[]
@@ -22,9 +25,22 @@ export default function Explore({ tweets: tweetsProp }: Props) {
                 </title>
             </Head>
             <NavigationBar tweets={tweets} />
-            <p className={styles.p}>
-            </p>
-            <SideBar />
+            <div className={styles.p}>
+                <div className={styles.exploreHeader}>
+                    <SearchTweet />
+                </div>
+                <div className={styles.exploreTrendsCardsContainer}>
+                    <TrendsForYou />
+                    <Link href={'/connect'}>
+                        <a className={styles.whoToFollowShowMoreLink}>
+                            <div className={styles.whoToFollowShowMoreText}>
+                                Show more
+                            </div>
+                        </a>
+                    </Link>
+                </div>
+            </div>
+            <WhoToFollow />
         </div>
     )
 }

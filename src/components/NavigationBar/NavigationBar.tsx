@@ -81,7 +81,7 @@ export const NavigationBar = ({ tweets: tweetsProp }: Props) => {
                     <div className={styles.headerNavMain}>
                         <ul ref={navBarItemListRef} className={styles.navMenuList}>
                             {NAVBAR_CONFIG.map(item => (
-                                <Link href={`/${item.link}`} key={item.link}>
+                                <Link href={`/${item.link}`} key={item.label}>
                                     <a className={styles.headerNavMenuLink} key={item.label}>
                                         <div className={styles.headerNavMenuItem}>
                                             <span className={styles.headerNavIcon}>{item.img}</span>
