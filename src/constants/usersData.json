@@ -1,0 +1,54 @@
+[
+    {
+        "id": "elonmusk",
+        "img": "https://pbs.twimg.com/profile_images/1587290337587904512/Y4s_eu5O_400x400.jpg",
+        "name": "Elon Musk",
+        "verified": true,
+        "userName": "elonmusk",
+        "link": "elonmusk",
+        "following": "117",
+        "followers": "113.6M",
+        "location": "Hell",
+        "joined": "June 2009",
+        "otherLink": ""
+    },
+    {
+        "id": "spacex",
+        "img": "https://pbs.twimg.com/profile_images/1082744382585856001/rH_k3PtQ_400x400.jpg",
+        "name": "SpaceX",
+        "verified": true,
+        "userName": "SpaceX",
+        "link": "SpaceX",
+        "following": "99",
+        "followers": "25.6M",
+        "location": "Hawthorne, CA",
+        "joined": "April 2009",
+        "otherLink": ""
+    },
+    {
+        "id": "arsenal",
+        "img": "https://pbs.twimg.com/profile_images/1587397526482784262/NUaBnwxP_400x400.jpg",
+        "name": "Arsenal",
+        "verified": true,
+        "userName": "Arsenal",
+        "link": "Arsenal",
+        "following": "147.4K",
+        "followers": "20.4M",
+        "location": "London",
+        "joined": "April 2009",
+        "otherLink": ""
+    },
+    {
+        "id": "khakimbekove",
+        "img": "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png",
+        "name": "Elbek Khakimbekov",
+        "verified": false,
+        "userName": "KhakimbekovE",
+        "link": "KhakimbekovE",
+        "following": "3",
+        "followers": "0",
+        "location": "Uzbekistan",
+        "joined": "October 2022",
+        "otherLink": ""
+    }
+]

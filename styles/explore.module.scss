@@ -1,0 +1,32 @@
+.explorePageContainer {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.p {
+    padding: 15px;
+    width: 100%;
+    border-right: 1px solid #eff3f4;
+    border-left: 1px solid #eff3f4;
+    border-bottom: none;
+    min-height: 110%;
+    background: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+    .p {
+        border-right: 1px solid #2f3336;
+        border-left: 1px solid #2f3336;
+    }
+}
+
+
+@media only screen and (max-width: 499px) {
+    .p {
+        display: none;
+    }
+}
