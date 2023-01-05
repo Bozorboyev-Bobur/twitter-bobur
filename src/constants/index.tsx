@@ -142,7 +142,7 @@ export const SUGGESDET_CONFIG = [
     {
         "id": "CatLoverCult",
         "numId": 1,
-        "img": "https://pbs.twimg.com/profile_images/1587865766518562818/HKLSaScw_400x400.jpg",
+        "img": "https://pbs.twimg.com/profile_images/1610062799589314561/HE-2jJHX_400x400.jpg",
         "name": "Cat 🎄",
         "verified": false,
         "nick": "CatLoverCult",

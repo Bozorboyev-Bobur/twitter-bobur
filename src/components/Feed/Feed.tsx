@@ -41,7 +41,7 @@ function Feed({ tweets: tweetsProp }: Props) {
                 <AddingTweet setTweets={setTweets} />
             </div>
             <div className={styles.feedPosts}>
-                {tweets.map(tweet => (
+                {tweets?.map(tweet => (
                     <TweetComponent key={tweet._id} tweet={tweet} tweets={tweets} />
                 ))}
             </div>

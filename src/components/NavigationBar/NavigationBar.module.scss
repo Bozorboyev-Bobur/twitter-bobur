@@ -451,20 +451,6 @@ $outline-color_2: #e4e4e4;
 }
 
 @media only screen and (max-width: 1087px) {
-    .headerNav {
-        max-width: 10%;
-        min-width: 10%;
-        max-width: 18%;
-        min-width: 18%;
-    }
-
-    .headerNavBg {
-        max-width: 10%;
-        min-width: 10%;
-        max-width: 18%;
-        min-width: 18%;
-    }
-
     .navMenuList {
         padding: 0 8px;
     }
@@ -489,8 +475,29 @@ $outline-color_2: #e4e4e4;
             display: flex;
         }
     }
+
+    .headerNav {
+        max-width: 18%;
+        min-width: 18%;
+    }
+
+    .headerNavBg {
+        max-width: 18%;
+        min-width: 18%;
+    }
 }
 
+@media only screen and (max-width: 757px) {
+    .headerNav {
+        max-width: 15%;
+        min-width: 15%;
+    }
+
+    .headerNavBg {
+        max-width: 15%;
+        min-width: 15%;
+    }
+}
 
 @media only screen and (max-width: 704px) {
     .headerNav {

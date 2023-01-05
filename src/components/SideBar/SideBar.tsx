@@ -20,7 +20,9 @@ export const SideBar = () => {
                         <SearchTweet />
                     </header>
                     <div className={styles.sideBarContent}>
-                        <TrendsForYou />
+                        <div className={styles.trendsForYouContainer}>
+                            <TrendsForYou />
+                        </div>
                         <WhoToFollow />
                     </div>
                 </div>

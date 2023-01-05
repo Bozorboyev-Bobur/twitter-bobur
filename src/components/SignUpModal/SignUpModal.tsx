@@ -142,7 +142,6 @@ export const SignUpModal = ({
                                     ref={nameRef}
                                     className={styles.signUpModalNameInput}
                                     type="text"
-                                    // placeholder='Name'
                                     maxLength={50}
                                     required
                                     onChange={(e) => {
@@ -168,7 +167,6 @@ export const SignUpModal = ({
                                         setData(e.target.value)
                                         formValidFunc()
                                     }}
-
                                 />
                                 <label htmlFor={"data"} className={styles.signUpModalDataInputLabel}>
                                     {signUpInputPlaceHolder}
@@ -211,7 +209,7 @@ export const SignUpModal = ({
                                     setSignUpModalState('initial')
                                 }}>
                                 <div className={styles.loginPageCloseImg}>
-                                    <svg className={'iconSvg'} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5L4 12L11 19M4 12H20" stroke="#0F1419" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path></svg>
+                                    <Icon icon="material-symbols:close" width='24' height='24' className={'iconSvg'} />
                                 </div>
                             </button>
                             <span className={styles.signUpModalStep}>
@@ -270,7 +268,7 @@ export const SignUpModal = ({
                                     setSignUpModalState('confirmation')
                                 }}>
                                 <div className={styles.loginPageCloseImg}>
-                                    <svg className={'iconSvg'} width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 5L4 12L11 19M4 12H20" stroke="#0F1419" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path></svg>
+                                    <Icon icon="material-symbols:close" width='24' height='24' className={'iconSvg'} />
                                 </div>
                             </button>
                             <span className={styles.signUpModalStep}>
