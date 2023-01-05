@@ -28,6 +28,7 @@
     "all": "^0.0.0",
     "axios": "^1.2.2",
     "classnames": "^2.3.2",
+    "dominant-color": "^0.0.1",
     "emoji-picker-react": "^4.4.5",
     "javascript-time-ago": "^2.5.9",
     "json-server": "^0.17.1",
@@ -46,6 +47,7 @@
     "react-giphy-picker": "^1.1.1",
     "react-hot-toast": "^2.4.0",
     "react-moment": "^1.1.2",
+    "react-native-image-colors": "^1.5.1",
     "react-phone-input-2": "^2.15.1",
     "react-tabindex": "^1.0.3",
     "react-textarea-autosize": "^8.4.0",
@@ -53,7 +55,8 @@
     "react-timeago": "^7.1.0",
     "sanity": "^2.33.2",
     "sass": "^1.56.1",
-    "timeago-react": "^3.0.5"
+    "timeago-react": "^3.0.5",
+    "use-image-color": "^0.0.9"
   },
   "devDependencies": {
     "@types/node": "18.11.3",

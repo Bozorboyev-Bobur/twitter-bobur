@@ -43,7 +43,7 @@ $color_7: #71767b;
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
     background: #ffffffd9;
-    z-index: 999;
+    z-index: 998;
     cursor: pointer;
 }
 
@@ -94,7 +94,7 @@ $color_7: #71767b;
 }
 
 @media (prefers-color-scheme: dark) {
-    .p {
+    .exploreContent {
         border-right: 1px solid #2f3336;
         border-left: 1px solid #2f3336;
     }
