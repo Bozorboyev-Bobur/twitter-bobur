@@ -50,7 +50,7 @@ export default function Explore({ tweets: tweetsProp }: Props) {
                         </a>
                     </Link>
                 </div>
-                <div className={styles.feedPosts}>
+                <div className={styles.explorePosts}>
                     {tweets?.map(tweet => (
                         <TweetComponent key={tweet._id} tweet={tweet} tweets={tweets} />
                     ))}
