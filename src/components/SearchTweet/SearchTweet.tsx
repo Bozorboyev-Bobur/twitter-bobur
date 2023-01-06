@@ -98,7 +98,7 @@ export const SearchTweet = () => {
                                         Search for "{searchTerm}"
                                     </div>
                                 </div>
-                                <Link href={`@${searchTerm}`}>
+                                <Link href={`${searchTerm}`}>
                                     <a className={styles.searchOtherResult}>
                                         <div className={styles.searchOtherResultText}>
                                             Go to @{searchTerm}

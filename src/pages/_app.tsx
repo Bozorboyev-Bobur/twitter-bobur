@@ -12,6 +12,7 @@ function TwitterApp({ Component, pageProps: { session, ...pageProps } }: any) {
           Твиттер. Здесь обсуждают всё, что происходит. / Твиттер
         </title>
         <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
         <meta charSet="utf-8" />
         <link rel="icon" href="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" />
       </Head>
