@@ -410,7 +410,6 @@ function User({ user, allUsers, tweets }: Props) {
                         </div>
                         <div className={styles.userContent} hidden={index !== 2}>
                             {tweets && tweets.map((tweet) => {
-                                console.log(tweet);
                                 if ((user.nick === tweet.nickname) && ((tweet.video !== undefined || '') || (tweet.image !== undefined || ''))) {
                                     return (
                                         <TweetComponent key={`${user.nickname}${Math.random()}`} tweet={tweet} tweets={tweets} />
