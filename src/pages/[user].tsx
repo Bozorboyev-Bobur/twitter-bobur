@@ -407,6 +407,13 @@ function User({ user, allUsers, tweets }: Props) {
                                     </a>
                                 </Link>
                             </div>
+                            {tweets && tweets.map(tweet => {
+                                if (tweet.nickname === user.nick) {
+                                    return (
+                                        <TweetComponent key={tweet._id} tweet={tweet} tweets={tweets} />
+                                    )
+                                }
+                            })}
                         </div>
                         <div className={styles.userContent} hidden={index !== 2}>
                             {tweets && tweets.map((tweet) => {
@@ -432,7 +439,7 @@ function User({ user, allUsers, tweets }: Props) {
                             )}
                         </div>
                         <div className={styles.userContent} hidden={index != 3}>
-                            {user.likedTweets && user.likedTweets.map((likedTweet: any) => {
+                            {user?.likedTweets && user?.likedTweets.map((likedTweet: any) => {
                                 for (let i = 0; i < tweets.length; i++) {
                                     if (tweets[i]._id === likedTweet) {
                                         return (
@@ -441,7 +448,7 @@ function User({ user, allUsers, tweets }: Props) {
                                     }
                                 }
                             })}
-                            {user.likedTweets.length === 0 && (
+                            {user.likedTweets && user.likedTweets.length === 0 && (
                                 <div className={styles.userEpmtyInteraction}>
                                     <div className={styles.userEpmtyInteractionTitle}>
                                         @{user.nick} hasn’t liked any Tweets

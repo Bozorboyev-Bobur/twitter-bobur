@@ -21,7 +21,7 @@ interface Props {
     tweets: Tweet[]
 }
 
-function Home({ tweets }: Props) {
+export default function Home({ tweets }: Props) {
     return (
         <div className={styles.homePageContainer}>
             <Head>
@@ -44,5 +44,3 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         }
     }
 }
-
-export default Home
