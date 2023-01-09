@@ -467,11 +467,11 @@ $outline-color_2: #e4e4e4;
 
 @media only screen and (max-width: 1004px) {
     .headerNavMenuLink {
-        &:nth-child(2) {
+        &:nth-child(7) {
             display: none;
         }
 
-        &:nth-child(3) {
+        &:nth-child(5) {
             display: flex;
         }
     }
@@ -665,6 +665,9 @@ $outline-color_2: #e4e4e4;
         }
 
         &:nth-child(8) {
+            display: none;
+        }
+        &:nth-child(9) {
             display: none;
         }
 

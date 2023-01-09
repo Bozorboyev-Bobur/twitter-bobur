@@ -4,12 +4,37 @@ import Head from "next/head"
 import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import router from 'next/router'
+import { SUGGESDET_CONFIG } from '../../constants'
 
 function ConnectCards({ componentTitle, configName }: any) {
+    const [loadPage, setLoadPage] = useState<boolean>(null)
+
+    useEffect(() => {
+        setLoadPage(true)
+    }, [])
     
+    const list = []
+    var uniqueArray = []
+    const cycle = configName === SUGGESDET_CONFIG ? SUGGESDET_CONFIG.length : 3
+
+    if (loadPage === true) {
+        for (let i = 0; i < cycle; i++) {
+            let item = configName[Math.floor(Math.random() * configName.length)];
+            list.push(item);
+            if ((list[i]?.nick?.toLowerCase() || list[i]?.name?.toLowerCase()) === document.location.pathname.slice(1).toLowerCase()) {
+                delete list[i]
+            }
+        }
+        uniqueArray = list.filter(function (item, pos) {
+            if (configName !== SUGGESDET_CONFIG) {
+                list.slice(0, list.length)
+            }
+            return list.indexOf(item) == pos;
+        })
+    }
 
     return (
-        <div className={styles.suggestedCards}>
+        <div className={styles.suggestedCards} >
             <div className={styles.suggestedCardsTitle}>
                 <div className={styles.suggestedCardsTitleContainer}>
                     <h3 className={styles.suggestedCardsTitleText}>
@@ -17,7 +42,7 @@ function ConnectCards({ componentTitle, configName }: any) {
                     </h3>
                 </div>
             </div>
-            {configName.map(user => (
+            {uniqueArray.map(user => (
                 <div tabIndex={0} className={styles.suggestedCard} key={user.numId} onClick={() => {
                     router.push({
                         pathname: `${user.nick}`

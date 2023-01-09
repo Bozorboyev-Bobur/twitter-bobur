@@ -5,7 +5,6 @@ import { NavigationBar } from "../components/NavigationBar";
 import { SideBar } from "../components/SideBar";
 import styles from '../../styles/user.module.scss'
 import { ReactElement, ReactHTMLElement, useEffect, useRef, useState, MouseEvent, Dispatch, SetStateAction } from "react";
-import { WHOTOFOLLOW_CONFIG } from '../constants/index'
 import classNames from "classnames";
 import TweetComponent from "../components/Post/Post";
 import ConnectCards from "../components/ConnectCards/ConnectCards";
@@ -379,7 +378,7 @@ function User({ user, allUsers, tweets }: Props) {
                     <div className={styles.userContentWrapper}>
                         <div className={styles.userContent} hidden={index !== 0}>
                             <div className={styles.userConnectCardsContainer}>
-                                <ConnectCards componentTitle={"Who to follow"} configName={WHOTOFOLLOW_CONFIG} />
+                                <ConnectCards componentTitle={"Who to follow"} configName={allUsers} />
                                 <Link href={'/connect'}>
                                     <a className={styles.whoToFollowShowMoreLink}>
                                         <div className={styles.whoToFollowShowMoreText}>
@@ -398,7 +397,7 @@ function User({ user, allUsers, tweets }: Props) {
                         </div>
                         <div className={styles.userContent} hidden={index !== 1}>
                             <div className={styles.userConnectCardsContainer}>
-                                <ConnectCards componentTitle={"Who to follow"} configName={WHOTOFOLLOW_CONFIG} />
+                                <ConnectCards componentTitle={"Who to follow"} configName={allUsers} />
                                 <Link href={'/connect'}>
                                     <a className={styles.whoToFollowShowMoreLink}>
                                         <div className={styles.whoToFollowShowMoreText}>
@@ -448,7 +447,7 @@ function User({ user, allUsers, tweets }: Props) {
                                     }
                                 }
                             })}
-                            {user.likedTweets && user.likedTweets.length === 0 && (
+                            {user?.likedTweets && user?.likedTweets.length === 0 && (
                                 <div className={styles.userEpmtyInteraction}>
                                     <div className={styles.userEpmtyInteractionTitle}>
                                         @{user.nick} hasn’t liked any Tweets

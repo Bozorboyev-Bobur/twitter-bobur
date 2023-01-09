@@ -105,37 +105,37 @@ export const NAVBAR_CONFIG = [
     }
 ]
 
-export const WHOTOFOLLOW_CONFIG = [
+export const TRENDSFORYOU_CONFIG = [
     {
-        "id": "premierleague",
-        "numId": 9,
-        "img": "https://pbs.twimg.com/profile_images/1587027543684792322/-gh7FuUq_400x400.jpg",
-        "name": "Premier League",
-        "verified": true,
-        "nick": "premierleague",
-        "about": "The official Twitter account of the Premier League ",
-        "youFollowing": false,
+        "country": "Uzbekistan",
+        "trendName": "Raxmat",
+        "tweetsCount": "2,402"
     },
     {
-        "id": "NASA",
-        "numId": 10,
-        "img": "https://pbs.twimg.com/profile_images/1321163587679784960/0ZxKlEKB_400x400.jpg",
-        "name": "NASA",
-        "verified": true,
-        "nick": "NASA",
-        "about": "There's space for everybody. ✨",
-        "youFollowing": true,
+        "country": "Uzbekistan",
+        "trendName": "Assalomu alaykum",
+        "tweetsCount": "8,262"
     },
     {
-        "id": "JoeBiden",
-        "numId": 6,
-        "img": "https://pbs.twimg.com/profile_images/1308769664240160770/AfgzWVE7_400x400.jpg",
-        "name": "Joe Biden",
-        "verified": true,
-        "nick": "JoeBiden",
-        "about": "Husband to @DrBiden, proud father and grandfather. Ready to build back better for all Americans. Official account is @POTUS.",
-        "youFollowing": true,
-    }
+        "country": "Uzbekistan",
+        "trendName": "Vachach!",
+        "tweetsCount": "7,302"
+    },
+    {
+        "country": "Uzbekistan",
+        "trendName": "Yangi yil!",
+        "tweetsCount": "14,569"
+    },
+    {
+        "country": "Uzbekistan",
+        "trendName": "Mezza!",
+        "tweetsCount": "1,382"
+    },
+    {
+        "country": "Uzbekistan",
+        "trendName": "Arzimidi",
+        "tweetsCount": "365"
+    },
 ]
 
 export const SUGGESDET_CONFIG = [

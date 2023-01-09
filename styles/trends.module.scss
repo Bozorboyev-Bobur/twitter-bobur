@@ -1,0 +1,548 @@
+$color_1: #0f1419;
+$color_2: #5B7083;
+$color_3: #fff;
+$color_4: #1d9bf0;
+$color_5: rgb(83, 100, 113);
+$color_6: #e7e9ea;
+$color_7: #71767b;
+
+.trendsPageContainer {
+    display: flex;
+    align-items: flex-start;
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.trends {
+    max-width: 350px;
+    width: 100%;
+    margin: 16px 48px 0 0;
+    position: fixed;
+}
+
+.trendsBg {
+    max-width: 350px;
+    width: 100%;
+    margin: 16px 48px 0 36px;
+}
+
+.verified {
+    background-image: url('/imgs/User/blueVerifiedIcon.svg');
+    margin: 0 2px;
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+    background-position: center;
+}
+
+.trendsContainer {
+    width: 100%;
+    min-height: 110%;
+    background: transparent;
+    color: $color_1;
+    margin-bottom: 16px;
+    width: 100%;
+    border-right: 1px solid #eff3f4;
+    border-left: 1px solid #eff3f4;
+    border-bottom: none;
+    height: auto;
+    max-width: 598px;
+    padding-bottom: 40vh;
+}
+
+.trendsHeader {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 53px;
+    display: flex;
+    padding: 0 15px;
+    background: #ffffffd9;
+    backdrop-filter: blur(12px);
+    z-index: 2;
+}
+
+.trendsHeaderBackBtnContainer {
+    min-width: 56px;
+    min-height: 32px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.trendsHeaderBackBtn {
+    min-width: 32px;
+    min-height: 32px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 9999px;
+    margin-left: -5px;
+    justify-content: center;
+    cursor: pointer;
+    transition: .2s ease-out;
+
+    &:hover {
+        background: #0f14191a;
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.trendsDataHeader {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    height: 56px;
+}
+
+.trendsTitleText {
+    color: $color_1;
+    font-size: 1.25rem;
+    line-height: 24px;
+    padding-bottom: 2px;
+    padding-top: 2px;
+}
+
+.trendsTitleContainer {
+    display: flex;
+    align-items: center;
+    height: 32px;
+}
+
+.trendsTitle {
+    font-size: 1.25rem;
+    padding: 12px 0;
+}
+
+.trendsCards {
+    width: 100%;
+}
+
+.trendsCardsTitleContainer {
+    padding: 12px 15px;
+}
+
+.trendsCardsTitle {
+    font-size: 1.075rem;
+    font-weight: 800;
+    line-height: 25px;
+}
+
+.trendsCard {
+    width: 100%;
+    height: auto;
+    min-height: 72px;
+    padding: 12px 16px;
+    display: flex;
+    transition: .2s ease-out;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+
+    &:hover {
+        background: #00000008;
+    }
+
+    &:focus-visible {
+        background: #00000008;
+        box-shadow: #8ecdf8 0px 0px 0px 2px inset;
+    }
+}
+
+.trendsImg {
+    margin: auto 0;
+    max-width: 48px;
+    width: 48px;
+    max-height: 48px;
+    height: 48px;
+    transition: .2s ease-out;
+
+    img {
+        max-width: 48px;
+        width: 48px;
+        max-height: 48px;
+        height: 48px;
+        border-radius: 9999px;
+    }
+
+    &:hover {
+        filter: brightness(.8);
+    }
+}
+
+.trendsData {
+    display: flex;
+    flex-direction: column;
+    margin: auto 0 auto 8px;
+}
+
+.trendsUserName {
+    font-size: 0.875rem;
+    color: $color_2;
+    font-weight: 400;
+}
+
+.trendsName {
+    display: flex;
+    align-items: center;
+    font-size: .950rem;
+    font-weight: 600;
+    outline: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:focus-visible {
+        text-decoration: underline;
+    }
+}
+
+.trendsNameText {
+    max-width: initial;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.trendsAbout {
+    margin-top: -5px;
+    font-size: .938rem;
+    line-height: 20px;
+    font-weight: 400;
+    padding-left: 56px;
+}
+
+.trendsFollowBtn {
+    margin: auto 0 auto auto;
+    border: none;
+    min-width: 77px;
+    background: #0f1419;
+    color: $color_3;
+    height: 32px;
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 40px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        background: #272c30;
+    }
+
+    &:focus-visible {
+        background: #272c30;
+    }
+}
+
+.trendsShowMoreLink {
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: .2s ease-out;
+    border-radius: 0 0 16px 16px;
+    outline: none;
+
+    &:hover {
+        background: #00000008;
+    }
+}
+
+.trendsShowMoreText {
+    line-height: 20px;
+    font-size: 0.875rem;
+    color: $color_4;
+}
+
+.trendsFooter {
+    width: 100%;
+    display: flex;
+    flex: 1 0 auto;
+}
+
+.trendsFooterLinks {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.trendsFooterlinksItem {
+    display: flex;
+    padding-right: 12px;
+    margin: 2px;
+    font-size: .825rem;
+    line-height: 16px;
+    color: $color_5;
+    align-items: center;
+
+    a {
+        outline: none;
+    }
+
+    &:not(:last-child) {
+        &:hover {
+            text-decoration: underline;
+        }
+
+        cursor: pointer;
+    }
+
+    &:nth-last-child(2) {
+        display: flex;
+    }
+}
+
+.trendsFooteTripleDots {
+    margin-left: 2px;
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+
+.trendsForYouCard {
+    width: 100%;
+    min-height: 72px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    transition: .2s ease-out;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    &:hover {
+        background: #00000008;
+    }
+
+    &:focus-visible {
+        background: #00000008;
+        box-shadow: #8ecdf8 0px 0px 0px 2px inset;
+    }
+}
+
+.trendsForYouData {
+    display: flex;
+    flex-direction: column;
+}
+
+.trendsForYouCountryName,
+.trendsForYouTweetsCount {
+    font-size: 0.875rem;
+    color: $color_2;
+    font-weight: 400;
+}
+
+.trendsForYouTrendName {
+    display: flex;
+    align-items: center;
+    font-size: .950rem;
+    font-weight: 600;
+    outline: none;
+    max-width: initial;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 5px 0;
+}
+
+.trendsForYouFollowBtn {
+    margin: 0 0 0 auto;
+    width: 36px;
+    height: 36px;
+    border-radius: 9999px;
+    border: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    transition: .2s ease-out;
+    cursor: pointer;
+
+    &:hover {
+        background: #0f14191a;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .trendsContainer {
+        border-right: 1px solid #2f3336;
+        border-left: 1px solid #2f3336;
+        color: $color_6;
+    }
+
+    .trendsHeader {
+        background: #000000d9;
+    }
+
+    .trendsCard {
+        &:hover {
+            background: #ffffff08;
+        }
+
+        &:focus-visible {
+            background: #ffffff08;
+            box-shadow: #8ecdf8 0px 0px 0px 2px inset;
+        }
+    }
+
+    .trendsFollowBtn {
+        background: #eff3f4;
+        color: $color_1;
+
+        &:hover {
+            background: #d7dbdc;
+        }
+
+        &:focus-visible {
+            background: #d7dbdc;
+        }
+    }
+
+    .trendsShowMoreLink {
+        &:hover {
+            background: #ffffff08;
+        }
+
+        &:focus-visible {
+            box-shadow: rgb(142, 205, 248) 0px 0px 0px 2px inset;
+            background: #ffffff08;
+        }
+    }
+
+    .trendsName {
+        &:focus-visible {
+            text-decoration: underline;
+        }
+    }
+
+    .trendsFooterlinksItem {
+        color: $color_7;
+
+        a {
+            &:focus-visible {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .trendsTitleText {
+        color: $color_6;
+    }
+
+    .trendsTweets {
+        color: $color_7;
+    }
+
+    .trendsBodyFollowBtn {
+        background: #eff3f4;
+        color: $color_1;
+
+        &:hover {
+            background: #d7dbdc;
+        }
+
+        &:focus-visible {
+            background: #d7dbdc;
+        }
+    }
+
+    .trendsBodyMoreBtn {
+        &:hover {
+            background: #0f1419;
+        }
+    }
+
+    .trendsInfosLocAndDate {
+        path {
+            stroke: #71767b;
+        }
+    }
+
+    .trendsInfosFollowingsNum {
+        color: $color_6;
+    }
+
+    .trendsFollowersNum {
+        color: $color_6;
+    }
+
+    .trendsInfosFollowers {
+        color: $color_7;
+        color: $color_7;
+    }
+
+    .trendsHeaderBackBtn {
+        &:hover {
+            background: rgba(239, 243, 244, .1);
+        }
+    }
+
+    .trendsForYouCard {
+        &:hover {
+            background: #ffffff08;
+        }
+
+        &:focus-visible {
+            background: #ffffff08;
+            box-shadow: #8ecdf8 0px 0px 0px 2px inset;
+        }
+    }
+
+    .trendsForYouFollowBtn {
+        &:hover {
+            background: #0f1419;
+        }
+    }
+
+    .trendsForYouShowMoreLink {
+        &:hover {
+            background: #ffffff08;
+        }
+
+        &:focus-visible {
+            box-shadow: #8ecdf8 0px 0px 0px 2px inset;
+            background: #ffffff08;
+        }
+    }
+}
+
+@media only screen and (max-width: 1094px) {
+    .trendsNameText {
+        max-width: 80px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        word-break: break-all;
+    }
+}
+
+@media only screen and (max-width: 499px) {
+    .trendsContainer {
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .trendsAbout {
+        word-break: break-all;
+    }
+}

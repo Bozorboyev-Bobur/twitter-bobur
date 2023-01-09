@@ -1,5 +1,5 @@
 import styles from './WhoToFollow.module.scss'
-import { WHOTOFOLLOW_CONFIG, SIDEBAR_CONFIG } from '../../constants/index'
+import { SUGGESDET_CONFIG, SIDEBAR_CONFIG } from '../../constants/index'
 import Link from "next/link"
 import Head from "next/head"
 import React, { useEffect, useRef, useState } from 'react'
@@ -9,13 +9,37 @@ import { useRouter } from 'next/router'
 export const WhoToFollow = () => {
     const date: Date = new Date
     const router = useRouter()
+
+    const [loadPage, setLoadPage] = useState<boolean>(false)
+
+    useEffect(() => {
+        setLoadPage(true)
+    })
+
+    const list = []
+    var uniqueArray = []
+
+    if (loadPage === true) {
+        for (let i = 0; i < 3; i++) {
+            let item = SUGGESDET_CONFIG[Math.floor(Math.random() * SUGGESDET_CONFIG.length)];
+            list.push(item);
+            if ((list[i].nick.toLowerCase() || list[i].name.toLowerCase()) === document.location.pathname.slice(1).toLowerCase()) {
+                delete list[i]
+            }
+        }
+        uniqueArray = list.filter(function (item, pos) {
+            list.slice(0, list.length)
+            return list.indexOf(item) == pos;
+        })
+    }
+
     return (
         <>
             <div className={styles.whoToFollow}>
                 <div className={styles.whoToFollowContainer}>
                     <h3 className={styles.whoToFollowTitle}>Who to follow</h3>
                     <div className={styles.whoToFollowBox}>
-                        {WHOTOFOLLOW_CONFIG.map(user => (
+                        {uniqueArray.map(user => (
                             <div tabIndex={0} key={user.id} className={styles.whoToFollowCard} onClick={() => {
                                 router.push({
                                     pathname: `${user.nick}`

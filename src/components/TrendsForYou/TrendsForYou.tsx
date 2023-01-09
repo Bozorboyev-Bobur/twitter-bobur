@@ -1,83 +1,59 @@
 import styles from '../TrendsForYou/TrendsForYou.module.scss'
-import { WHOTOFOLLOW_CONFIG, SIDEBAR_CONFIG } from '../../constants/index'
 import Link from "next/link"
 import Head from "next/head"
 import React, { useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
+import { TRENDSFORYOU_CONFIG } from '../../constants'
 
 export const TrendsForYou = () => {
     const date: Date = new Date
     const router = useRouter()
+
+    const [loadPage, setLoadPage] = useState<boolean>(false)
+
+    useEffect(() => {
+        setLoadPage(true)
+    })
+
+    const list = []
+    var uniqueArray = []
+
+    if (loadPage === true) {
+        for (let i = 0; i < 3; i++) {
+            let item = TRENDSFORYOU_CONFIG[Math.floor(Math.random() * TRENDSFORYOU_CONFIG.length)];
+            list.push(item);
+        }
+        uniqueArray = list.filter(function (item, pos) {
+            list.slice(0, list.length)
+            return list.indexOf(item) == pos;
+        })
+    }
+
     return (
         <>
-            {/* <div className={styles.trendsForYou}> */}
-            {/* <div className={styles.trendsForYouContainer}> */}
             <h3 className={styles.trendsForYouTitle}>Trends for you</h3>
             <div className={styles.trendsForYouBox}>
-                <div tabIndex={0} className={styles.trendsForYouCard} onClick={() => {
-                }}>
-                    <div className={styles.trendsForYouData}>
-                        <p className={styles.trendsForYouCountryName}>
-                            Trending in Uzbekistan
-                        </p>
-                        <div className={styles.trendsForYouTrendName}>
-                            #Raxmat
+                {uniqueArray.map((item) => (
+                    <div tabIndex={0} className={styles.trendsForYouCard} onClick={() => {
+                    }}>
+                        <div className={styles.trendsForYouData}>
+                            <p className={styles.trendsForYouCountryName}>
+                                {item.country}
+                            </p>
+                            <div className={styles.trendsForYouTrendName}>
+                                {item.trendName}
+                            </div>
+                            <div className={styles.trendsForYouTweetsCount}>
+                                {item.tweetsCount} Tweets
+                            </div>
                         </div>
-                        <div className={styles.trendsForYouTweetsCount}>
-                            2,402 tweets
-                        </div>
+                        <button className={styles.trendsForYouFollowBtn}>
+                            ···
+                        </button>
                     </div>
-                    <button className={styles.trendsForYouFollowBtn}>
-                        ···
-                    </button>
-                </div>
-                <div tabIndex={0} className={styles.trendsForYouCard} onClick={() => {
-                }}>
-                    <div className={styles.trendsForYouData}>
-                        <p className={styles.trendsForYouCountryName}>
-                            Trending in Uzbekistan
-                        </p>
-                        <div className={styles.trendsForYouTrendName}>
-                            #Raxmat
-                        </div>
-                        <div className={styles.trendsForYouTweetsCount}>
-                            2,402 tweets
-                        </div>
-                    </div>
-                    <button className={styles.trendsForYouFollowBtn}>
-                        ···
-                    </button>
-                </div>
-                <div tabIndex={0} className={styles.trendsForYouCard} onClick={() => {
-                }}>
-                    <div className={styles.trendsForYouData}>
-                        <p className={styles.trendsForYouCountryName}>
-                            Trending in Uzbekistan
-                        </p>
-                        <div className={styles.trendsForYouTrendName}>
-                            #Raxmat
-                        </div>
-                        <div className={styles.trendsForYouTweetsCount}>
-                            2,402 tweets
-                        </div>
-                    </div>
-                    <button className={styles.trendsForYouFollowBtn}>
-                        ···
-                    </button>
-                </div>
+                ))}
             </div>
-            {/* <Link href={'/connect'}>
-                    <a className={styles.trendsForYouShowMoreLink}>
-                        <div className={styles.trendsForYouShowMoreText}>
-                            Show more
-                        </div>
-                    </a>
-                </Link>
-            </div> */}
-            {/* </div>
-            <div className={styles.trendsForYouBg}>
-            </div> */}
         </>
     )
 }

@@ -42,7 +42,7 @@ export default function Explore({ tweets: tweetsProp }: Props) {
                 </div>
                 <div className={styles.exploreTrendsCardsContainer}>
                     <TrendsForYou />
-                    <Link href={'/connect'}>
+                    <Link href={'/i/trends'}>
                         <a className={styles.trendsForYouShowMoreLink}>
                             <div className={styles.trendsForYouShowMoreText}>
                                 Show more
