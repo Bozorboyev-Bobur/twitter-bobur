@@ -22,6 +22,13 @@ export const SideBar = () => {
                     <div className={styles.sideBarContent}>
                         <div className={styles.trendsForYouContainer}>
                             <TrendsForYou />
+                            <Link href={'/i/trends'}>
+                                <a className={styles.trendsForYouShowMoreLink}>
+                                    <div className={styles.trendsForYouShowMoreText}>
+                                        Show more
+                                    </div>
+                                </a>
+                            </Link>
                         </div>
                         <WhoToFollow />
                     </div>

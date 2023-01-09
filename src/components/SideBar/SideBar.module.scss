@@ -69,8 +69,8 @@ $color_7: #71767b;
 	width: 100%;
 	height: 55px;
 	display: flex;
-    justify-content: center;
-    align-items: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .sideBarSearchBox {
@@ -263,7 +263,43 @@ $color_7: #71767b;
 	}
 }
 
+.trendsForYouShowMoreLink {
+	padding: 16px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	transition: .2s ease-out;
+	outline: none;
+
+	&:hover {
+		background: #00000008;
+	}
+
+	&:focus-visible {
+		box-shadow: #8ecdf8 0px 0px 0px 2px inset;
+		background: #00000008;
+	}
+}
+
+.trendsForYouShowMoreText {
+	line-height: 20px;
+	font-size: 0.875rem;
+	color: $color_4;
+}
+
 @media (prefers-color-scheme: dark) {
+	.trendsForYouShowMoreLink {
+		&:hover {
+			background: #ffffff08;
+		}
+
+		&:focus-visible {
+			box-shadow: #8ecdf8 0px 0px 0px 2px inset;
+			background: #ffffff08;
+		}
+	}
+
 	.sideBarSearchBox {
 		background-color: $background-color_1;
 		color: $color_1;

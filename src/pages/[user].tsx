@@ -379,7 +379,7 @@ function User({ user, allUsers, tweets }: Props) {
                         <div className={styles.userContent} hidden={index !== 0}>
                             <div className={styles.userConnectCardsContainer}>
                                 <ConnectCards componentTitle={"Who to follow"} configName={allUsers} />
-                                <Link href={'/connect'}>
+                                <Link href={'/i/connect'}>
                                     <a className={styles.whoToFollowShowMoreLink}>
                                         <div className={styles.whoToFollowShowMoreText}>
                                             Show more

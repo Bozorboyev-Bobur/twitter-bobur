@@ -1,14 +1,14 @@
-import styles from '../../../styles/suggested.module.scss'
-import { SUGGESDET_CONFIG } from '../../constants/index'
+import styles from '../../../../styles/suggested.module.scss'
+import { SUGGESDET_CONFIG } from '../../../constants/index'
 import Link from "next/link"
 import Head from "next/head"
 import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { useRouter } from 'next/router'
-import { NavigationBar } from '../../components/NavigationBar'
-import { SideBar } from '../../components/SideBar'
-import ConnectCards from '../../components/ConnectCards/ConnectCards'
-import { Tweet } from "../../typings"
+import { NavigationBar } from '../../../components/NavigationBar'
+import { SideBar } from '../../../components/SideBar'
+import ConnectCards from '../../../components/ConnectCards/ConnectCards'
+import { Tweet } from "../../../typings"
 import { Icon } from '@iconify/react'
 
 interface Props {

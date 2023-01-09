@@ -19,12 +19,12 @@ export default function Trends({ tweets }: Props) {
 
     const [loadPage, setLoadPage] = useState<boolean>(false)
 
-    // useEffect(() => {
-    //     setLoadPage(true)
-    // })
-
     const list = []
     var uniqueArray = []
+
+    useEffect(() => {
+        setLoadPage(true)
+    }, [])
 
     if (loadPage === true) {
         for (let i = 0; i <= TRENDSFORYOU_CONFIG.length; i++) {

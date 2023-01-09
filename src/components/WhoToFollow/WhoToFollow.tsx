@@ -70,7 +70,7 @@ export const WhoToFollow = () => {
                             </div>
                         ))}
                     </div>
-                    <Link href={'/connect'}>
+                    <Link href={'/i/connect'}>
                         <a className={styles.whoToFollowShowMoreLink}>
                             <div className={styles.whoToFollowShowMoreText}>
                                 Show more

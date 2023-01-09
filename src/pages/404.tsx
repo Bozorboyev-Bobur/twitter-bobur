@@ -21,13 +21,11 @@ export default function Error({ tweets }: Props) {
                 <h2 className={styles.errorPageTitle}>
                     Hmm...this page doesn’t exist. Try searching for something else.
                 </h2>
-                <button className={styles.errorPageBtn}>
-                    <Link href={'/explore'}>
-                        <a className={styles.errorPageLink}>
-                            Search
-                        </a>
-                    </Link>
-                </button>
+                <Link href={'/explore'}>
+                    <a className={styles.errorPageBtn}>
+                        Search
+                    </a>
+                </Link>
             </main>
         </div>
     )
