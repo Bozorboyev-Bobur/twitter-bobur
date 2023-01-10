@@ -42,14 +42,14 @@ export const WhoToFollow = () => {
                         {uniqueArray.map(user => (
                             <div tabIndex={0} key={user.id} className={styles.whoToFollowCard} onClick={() => {
                                 router.push({
-                                    pathname: `${user.nick}`
+                                    pathname: `/${user.nick}`
                                 });
                             }}>
                                 <div tabIndex={-1} className={styles.whoToFollowImg}>
                                     <img src={`${user.img || 'https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png'}`} alt="" />
                                 </div>
                                 <div className={styles.whoToFollowData}>
-                                    <Link href={`${user.nick}`}>
+                                    <Link href={`/${user.nick}`}>
                                         <a className={styles.whoToFollowName}>
                                             <p className={styles.whoToFollowNameText}>
                                                 {user.name}

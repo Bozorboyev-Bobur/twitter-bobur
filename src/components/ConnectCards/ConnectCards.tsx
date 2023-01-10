@@ -45,7 +45,7 @@ function ConnectCards({ componentTitle, configName }: any) {
             {uniqueArray.map(user => (
                 <div tabIndex={0} className={styles.suggestedCard} key={user.numId} onClick={() => {
                     router.push({
-                        pathname: `${user.nick}`
+                        pathname: `/${user.nick}`
                     });
                 }}>
                     <div className={styles.suggestedDataHeader}>
@@ -53,7 +53,7 @@ function ConnectCards({ componentTitle, configName }: any) {
                             <img src={`${user.img || "https://abs.twimg.com/sticky/default_profile_images/default_profile_400x400.png"}`} alt="" />
                         </div>
                         <div className={styles.suggestedData}>
-                            <Link href={`${user.nick}`}>
+                            <Link href={`/${user.nick}`}>
                                 <a className={styles.suggestedName}>
                                     <p className={styles.suggestedNameText}>
                                         {user.name}

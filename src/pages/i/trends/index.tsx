@@ -36,7 +36,7 @@ export default function Trends({ tweets }: Props) {
             return list.indexOf(item) == pos;
         })
     }
-
+    var approx = require('approximate-number')
     return (
         <div className={styles.trendsPageContainer}>
             <Head>
@@ -63,7 +63,7 @@ export default function Trends({ tweets }: Props) {
                     </div>
                 </div>
                 {uniqueArray.map((item) => (
-                    <div tabIndex={0} className={styles.trendsForYouCard} onClick={() => {
+                    <div key={Math.random()} tabIndex={0} className={styles.trendsForYouCard} onClick={() => {
                     }}>
                         <div className={styles.trendsForYouData}>
                             <p className={styles.trendsForYouCountryName}>
@@ -73,7 +73,9 @@ export default function Trends({ tweets }: Props) {
                                 {item.trendName}
                             </div>
                             <div className={styles.trendsForYouTweetsCount}>
-                                {item.tweetsCount} Tweets
+                                {approx(item.tweetsCount, {
+                                    min10k: true
+                                })} Tweets
                             </div>
                         </div>
                         <button className={styles.trendsForYouFollowBtn}>

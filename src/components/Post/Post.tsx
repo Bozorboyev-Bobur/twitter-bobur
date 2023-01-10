@@ -48,7 +48,7 @@ function Post({ tweet, tweets: tweetsProp }: Props) {
     useEffect(() => {
         refreshComments()
     }, [])
-
+    var approx = require('approximate-number');
     return (
         <>
             <div className={styles.postAndCommentContainer} key={(tweet._id)} >
@@ -126,7 +126,9 @@ function Post({ tweet, tweets: tweetsProp }: Props) {
                                     <Icon icon={"fluent:comment-28-regular"} width='20' height='20' />
                                 </div>
                                 <div className={styles.postFooterItemText}>
-                                    {tweet._id === tweet._id && comments.length}
+                                    {(approx(tweet._id === tweet._id && comments.length, {
+                                        min10k: true
+                                    }))}
                                 </div>
                             </div>
                             <div className={styles.postFooterItem}>

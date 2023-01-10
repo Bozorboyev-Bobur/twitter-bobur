@@ -109,27 +109,27 @@ export const TRENDSFORYOU_CONFIG = [
     {
         "country": "Uzbekistan",
         "trendName": "Raxmat",
-        "tweetsCount": "2,402"
+        "tweetsCount": "2402"
     },
     {
         "country": "Uzbekistan",
         "trendName": "Assalomu alaykum",
-        "tweetsCount": "8,262"
+        "tweetsCount": "8262"
     },
     {
         "country": "Uzbekistan",
         "trendName": "Vachach!",
-        "tweetsCount": "7,302"
+        "tweetsCount": "7302"
     },
     {
         "country": "Uzbekistan",
         "trendName": "Yangi yil!",
-        "tweetsCount": "14,569"
+        "tweetsCount": "14569"
     },
     {
         "country": "Uzbekistan",
         "trendName": "Mezza!",
-        "tweetsCount": "1,382"
+        "tweetsCount": "1382"
     },
     {
         "country": "Uzbekistan",

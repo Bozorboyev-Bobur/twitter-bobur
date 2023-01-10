@@ -26,6 +26,7 @@
     "@react-icons/all-files": "^4.1.0",
     "@sanity/image-url": "^1.0.1",
     "all": "^0.0.0",
+    "approximate-number": "^2.1.0",
     "axios": "^1.2.2",
     "classnames": "^2.3.2",
     "dominant-color": "^0.0.1",

@@ -22,6 +22,7 @@ interface Props {
 }
 
 function User({ user, allUsers, tweets }: Props) {
+    var approx = require('approximate-number');
     const [follow, setFollow] = useState(user.youFollowing)
     const followBtnValue = follow ? 'Following' : 'Follow'
 
@@ -129,16 +130,24 @@ function User({ user, allUsers, tweets }: Props) {
 
     useEffect(() => {
         if (index === 0) {
-            setHeaderTitle(`${tweetNick.filter(item => item === user.nick).length} ${tweetNick.filter(item => item === user.nick).length === 1 ? 'Tweet' : 'Tweets'}`)
+            setHeaderTitle(`${approx(tweetNick.filter(item => item === user.nick).length, {
+                min10k: true
+            })} ${tweetNick.filter(item => item === user.nick).length === 1 ? 'Tweet' : 'Tweets'}`)
         }
         else if (index === 1) {
-            setHeaderTitle(`${tweetNick.filter(item => item === user.nick).length} ${tweetNick.filter(item => item === user.nick).length === 1 ? 'Tweet' : 'Tweets'}`)
+            setHeaderTitle(`${approx(tweetNick.filter(item => item === user.nick).length, {
+                min10k: true
+            })} ${tweetNick.filter(item => item === user.nick).length === 1 ? 'Tweet' : 'Tweets'}`)
         }
         else if (index === 2) {
-            setHeaderTitle(`${tweetMedias.length} Photos & videos`)
+            setHeaderTitle(`${approx(tweetMedias.length, {
+                min10k: true
+            })} Photos & videos`)
         }
         else if (index === 3) {
-            setHeaderTitle(`${user.likedTweets && user.likedTweets.length} ${user.likedTweets && user.likedTweets.length === 1 ? 'Like' : 'Likes'}`)
+            setHeaderTitle(`${approx(user.likedTweets && user.likedTweets.length, {
+                min10k: true
+            })} ${user.likedTweets && user.likedTweets.length === 1 ? 'Like' : 'Likes'}`)
         }
     })
 
