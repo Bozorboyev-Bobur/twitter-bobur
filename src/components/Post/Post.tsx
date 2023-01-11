@@ -10,8 +10,9 @@ import { useSession } from 'next-auth/react';
 import moment from 'moment/moment';
 import toast from 'react-hot-toast';
 import { AddingTweetModal } from '../AddingTweetModal';
-import { AddingCommentModal } from '../AddingCommentModal/AddingTweetModal';
+import { AddingCommentModal } from '../AddingCommentModal';
 import { Icon } from '@iconify/react';
+import { Like } from '../Like/Like';
 
 interface Props {
     tweet: Tweet
@@ -140,12 +141,11 @@ function Post({ tweet, tweets: tweetsProp }: Props) {
                                 </div>
                             </div>
                             <div className={styles.postFooterItem}>
-                                <div className={styles.postFooterItemImg}>
-                                    <Icon icon={"ph:heart"} width='20' height='20' />
-                                </div>
-                                <div className={styles.postFooterItemText}>
-                                    {tweet.like}
-                                </div>
+                                <Like>
+                                    {<div className={styles.postFooterItemText}>
+                                        {tweet.like}
+                                    </div>}
+                                </Like>
                             </div>
                             <div className={styles.postFooterShareBtn}>
                                 <Icon icon={"quill:share"} width='20' height='20' />
@@ -231,12 +231,11 @@ function Post({ tweet, tweets: tweetsProp }: Props) {
                                                     </div>
                                                 </div>
                                                 <div className={styles.postFooterItem}>
-                                                    <div className={styles.postFooterItemImg}>
-                                                        <Icon icon={"ph:heart"} width='20' height='20' />
-                                                    </div>
-                                                    <div className={styles.postFooterItemText}>
-                                                        {tweet.like}
-                                                    </div>
+                                                    <Like>
+                                                        <div className={styles.postFooterItemText}>
+                                                            {tweet.like}
+                                                        </div>
+                                                    </Like>
                                                 </div>
                                                 <div className={styles.postFooterShareBtn}>
                                                     <Icon icon={"quill:share"} width='20' height='20' />

@@ -1,14 +1,14 @@
 import React, { Dispatch, MouseEvent, SetStateAction, useEffect, useRef, useState } from 'react'
 import styles from './AddingCommentModal.module.scss'
 import { useSession } from 'next-auth/react';
-import { Comment, CommentBody, Tweet, TweetBody } from '../../../typings';
-import { fetchTweets } from '../../../utils/fetchTweets';
+import { Comment, CommentBody, Tweet, TweetBody } from '../../typings';
+import { fetchTweets } from '../../utils/fetchTweets';
 import { toast } from 'react-hot-toast';
 import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import TextareaAutosize from 'react-textarea-autosize'
 import classNames from 'classnames';
-import { fetchComments } from '../../../utils/fetchComments';
+import { fetchComments } from '../../utils/fetchComments';
 import EmojiPicker from 'emoji-picker-react';
 import moment from 'moment';
 import router from 'next/router';

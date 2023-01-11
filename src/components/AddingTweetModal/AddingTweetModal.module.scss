@@ -30,7 +30,7 @@ $grey: #d6d9db;
     min-width: 100vw;
     opacity: 0;
     min-height: 100vh;
-    z-index: -1;
+    z-index: -9999;
 }
 
 .emojiPickerFormBgActive {
@@ -46,7 +46,7 @@ $grey: #d6d9db;
     background: rgba(0, 0, 0, 0.4);
     width: 100vw;
     height: 100vh;
-    z-index: -1;
+    z-index: -9999;
 }
 
 .addingTweetModal {
@@ -60,7 +60,7 @@ $grey: #d6d9db;
     top: 30px;
     transform: translate(-50%, 0%);
     overflow-y: auto;
-    z-index: -1;
+    z-index: -9999;
     opacity: 0;
     border-radius: 10px;
     display: flex;

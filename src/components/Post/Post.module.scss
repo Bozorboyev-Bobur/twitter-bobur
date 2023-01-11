@@ -235,24 +235,10 @@ $border-color_2: #333639;
     &:nth-child(3) {
         &:hover {
             color: $color_3;
-
-            >.postFooterItemImg {
-                svg {
-                    path {
-                        fill: #f91880;
-                        stroke: #f91a82;
-                        filter: invert(0);
-                    }
-                }
-
-                background-color: $background-color_4;
-            }
         }
     }
 
     svg {
-        width: 1.25rem;
-
         path {
             transition: .2s ease-out;
         }

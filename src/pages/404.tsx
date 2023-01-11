@@ -13,7 +13,7 @@ export default function Error({ tweets }: Props) {
         <div className={styles.errorPageContainer}>
             <Head>
                 <title>
-                    Page nor found / Twitter
+                    Page not found / Twitter
                 </title>
             </Head>
             <NavigationBar tweets={tweets} />

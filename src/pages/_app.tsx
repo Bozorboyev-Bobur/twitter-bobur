@@ -14,7 +14,7 @@ function TwitterApp({ Component, pageProps: { session, ...pageProps } }: any) {
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, user-scalable=no"></meta>
         <meta charSet="utf-8" />
-        <link rel="icon" href="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-logo-vector-png-clipart-1.png" />
+        <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/345_Twitter_logo-512.png" />
       </Head>
       <Toaster
         position="bottom-center"
