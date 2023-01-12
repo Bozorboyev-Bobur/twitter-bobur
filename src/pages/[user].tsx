@@ -14,6 +14,7 @@ import { Icon } from "@iconify/react";
 import Feed from "../components/Feed/Feed";
 import { GetServerSideProps } from "next";
 import { fetchTweets } from "../utils/fetchTweets"
+import { fips } from "crypto";
 
 interface Props {
     tweets: Tweet[]
@@ -33,9 +34,10 @@ function User({ user, allUsers, tweets }: Props) {
     const userImgModalBgRef = useRef<HTMLDivElement>(null)
     const userBgImgModaBgRef = useRef<HTMLDivElement>(null)
     const userBgImgContainerRef = useRef<HTMLDivElement>(null)
+    const followBtnRef = useRef<HTMLButtonElement>(null)
+    const fixedFollowBtnRef = useRef<HTMLButtonElement>(null)
 
     const [isImgModalOpen, setIsImgModalOpen] = useState<boolean>(false)
-    const [followBtnSticky, setFollowBtnSticky] = useState<boolean>(false)
 
     const [isBgImgModalOpen, setIsBgImgModalOpen] = useState<boolean>(false)
     const [index, setIndex] = useState<number>(0)
@@ -47,12 +49,12 @@ function User({ user, allUsers, tweets }: Props) {
     }
 
     useEffect(() => {
-        const followBtn: any = document.querySelector('#followBtn')
         window.addEventListener('scroll', () => {
-            if (followBtn.getBoundingClientRect().top < 20) {
-                setFollowBtnSticky(true)
+            if (!followBtnRef.current) return
+            if (followBtnRef.current.getBoundingClientRect().top < 20) {
+                fixedFollowBtnRef.current.style.display = "block"
             } else {
-                setFollowBtnSticky(false)
+                fixedFollowBtnRef.current.style.display = "none"
             }
         })
     })
@@ -186,8 +188,7 @@ function User({ user, allUsers, tweets }: Props) {
                             </div>
                         </div>
                         <div className={styles.userHeaderRight}>
-                            <button className={classNames(styles.userBodyFixedFollowBtn, {
-                                [styles.fixed]: followBtnSticky,
+                            <button ref={fixedFollowBtnRef} className={classNames(styles.userBodyFixedFollowBtn, {
                             })} onClick={followToggler}>
                                 {followBtnValue}
                             </button>
@@ -237,7 +238,7 @@ function User({ user, allUsers, tweets }: Props) {
                             <button className={styles.userBodyMoreBtn}>
                                 ...
                             </button>
-                            <button id="followBtn" className={styles.userBodyFollowBtn} onClick={followToggler}>
+                            <button ref={followBtnRef} id="followBtn" className={styles.userBodyFollowBtn} onClick={followToggler}>
                                 {followBtnValue}
                             </button>
                         </div>

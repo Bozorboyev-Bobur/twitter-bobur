@@ -142,9 +142,11 @@ function Post({ tweet, tweets: tweetsProp }: Props) {
                             </div>
                             <div className={styles.postFooterItem}>
                                 <Like>
-                                    {<div className={styles.postFooterItemText}>
-                                        {tweet.like}
-                                    </div>}
+                                    <div className={styles.postFooterItemText}>
+                                        {tweet.like && (
+                                            tweet.like
+                                        )}
+                                    </div>
                                 </Like>
                             </div>
                             <div className={styles.postFooterShareBtn}>
@@ -233,7 +235,9 @@ function Post({ tweet, tweets: tweetsProp }: Props) {
                                                 <div className={styles.postFooterItem}>
                                                     <Like>
                                                         <div className={styles.postFooterItemText}>
-                                                            {tweet.like}
+                                                            {tweet.like && (
+                                                                tweet.like
+                                                            )}
                                                         </div>
                                                     </Like>
                                                 </div>
