@@ -225,11 +225,11 @@ $color_7: #71767b;
 
 	.searchResultCard {
 		&:hover {
-			background: #ffffff08;
+			background: #16181c;
 		}
 
 		&:focus-visible {
-			background: #ffffff08;
+			background: #16181c;
 			box-shadow: #8ecdf8 0px 0px 0px 2px inset;
 		}
 	}
@@ -242,12 +242,12 @@ $color_7: #71767b;
 
 	.searchOtherResult {
 		&:hover {
-			background: #ffffff08;
+			background: #16181c;
 		}
 
 		&:focus-visible {
 			box-shadow: #8ecdf8 0px 0px 0px 2px inset;
-			background: #ffffff08;
+			background: #16181c;
 		}
 	}
 

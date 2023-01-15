@@ -12,13 +12,14 @@ import { AddingTweetModal } from '../AddingTweetModal'
 import { AddingTweet } from '../AddingTweet'
 import { fetchTweets } from '../../utils/fetchTweets'
 import { Icon } from '@iconify/react'
+import { useRouter } from 'next/router'
 
 interface Props {
     tweets: Tweet[]
 }
 
 export const NavigationBar = ({ tweets: tweetsProp }: Props) => {
-    const navBarItemListRef = useRef(null)
+    const navBarListItem = useRef(null)
     const signOutModalBgRef = useRef(null)
 
     const { data: session } = useSession()
@@ -26,6 +27,10 @@ export const NavigationBar = ({ tweets: tweetsProp }: Props) => {
     const [isAddingTweetModalOpen, setIsAddingTweetModalOpen] = useState<boolean>(false)
     const [tweets, setTweets] = useState<Tweet[]>(tweetsProp)
     const addingTweetModalBgRef = useRef<HTMLDivElement>(null)
+
+    const router = useRouter()
+
+    console.log();
 
     useEffect(() => {
         if (isAddingTweetModalOpen) {
@@ -43,11 +48,11 @@ export const NavigationBar = ({ tweets: tweetsProp }: Props) => {
     })
 
     useEffect(() => {
-        for (let i = 0; i < navBarItemListRef.current.children.length; i++) {
-            if (navBarItemListRef.current.children[i].href == document.location.href) {
-                navBarItemListRef.current.children[i].lastChild.lastChild.style.fontWeight = '700';
+        for (let i = 0; i < navBarListItem.current.children.length; i++) {
+            if (navBarListItem.current.children[i].href == document.location.href) {
+                navBarListItem.current.children[i].lastChild.lastChild.style.fontWeight = '700';
             } else {
-                navBarItemListRef.current.children[i].style.fontWeight = '400'
+                navBarListItem.current.children[i].style.fontWeight = '400'
             }
         }
     })
@@ -79,12 +84,14 @@ export const NavigationBar = ({ tweets: tweetsProp }: Props) => {
                         </h1>
                     </div>
                     <div className={styles.headerNavMain}>
-                        <ul ref={navBarItemListRef} className={styles.navMenuList}>
+                        <ul ref={navBarListItem} className={styles.navMenuList}>
                             {NAVBAR_CONFIG.map(item => (
                                 <Link href={`/${item.link}`} key={item.label}>
                                     <a className={styles.headerNavMenuLink} key={item.label}>
                                         <div className={styles.headerNavMenuItem}>
-                                            <span className={styles.headerNavIcon}>{item.img}</span>
+                                            <span className={styles.headerNavIcon}>{item.link === router.pathname.slice(1) && (
+                                                item.fillImg
+                                            ) || item.img}</span>
                                             <span className={styles.headerNavMenuText}>
                                                 {item.label}
                                             </span>
@@ -96,7 +103,9 @@ export const NavigationBar = ({ tweets: tweetsProp }: Props) => {
                                 <a className={styles.headerNavMenuLink}>
                                     <div className={styles.headerNavMenuItem}>
                                         <span className={styles.headerNavIcon}>
-                                            <Icon icon={"mingcute:user-1-line"} width='28' height='28' />
+                                            {session?.user?.name.toLocaleLowerCase() === router.pathname.slice(1) && (
+                                                <Icon icon={"mingcute:user-2-fill"} width='28' height='28' />
+                                            ) || <Icon icon={"mingcute:user-2-line"} width='28' height='28' />}
                                         </span>
                                         <span className={styles.headerNavMenuText}>
                                             Profile
@@ -119,7 +128,7 @@ export const NavigationBar = ({ tweets: tweetsProp }: Props) => {
                                     setIsAddingTweetModalOpen(true)
                                 }}>
                                 <span className={styles.headerNavTweetText}>Tweet</span>
-                                <Icon icon={"mdi:feather"} width='28' height='28' className={styles.headerNavTweetImg}/>
+                                <Icon icon={"mdi:feather"} width='28' height='28' className={styles.headerNavTweetImg} />
                             </button>
                         </ul>
                     </div>

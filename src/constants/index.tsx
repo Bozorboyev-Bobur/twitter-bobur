@@ -70,36 +70,43 @@ import { Icon } from '@iconify/react';
 export const NAVBAR_CONFIG = [
     {
         img: <Icon icon={"mingcute:home-5-line"} width='28' height='28' />,
+        fillImg: <Icon icon={"mingcute:home-5-fill"} width='26' height='26' />,
         label: 'Home',
         link: 'home',
     },
     {
         img: < Icon icon={"mingcute:hashtag-line"} width='28' height='28' />,
+        fillImg: <Icon icon={"mingcute:hashtag-fill"} width='26' height='26' />,
         label: 'Explore',
         link: 'explore',
     },
     {
         img: <Icon icon="ri:search-line" width='26' height='26' />,
+        fillImg: <Icon icon={"ri:search-line"} width='26' height='26' />,
         label: '',
         link: 'explore',
     },
     {
         img: < Icon icon={"mingcute:notification-line"} width='28' height='28' />,
+        fillImg: <Icon icon={"mingcute:notification-fill"} width='26' height='26' />,
         label: 'Notifications',
         link: 'i/notifications',
     },
     {
         img: < Icon icon={"mdi:envelope-outline"} width='28' height='28' />,
+        fillImg: <Icon icon={"fa-solid:envelope"} width='24' height='24' />,
         label: 'Messages',
         link: 'i/messages',
     },
     {
         img: < Icon icon={"ic:round-bookmark-border"} width='28' height='28' />,
+        fillImg: <Icon icon={"ic:baseline-bookmark"} width='26' height='26' />,
         label: 'Bookmarks',
         link: 'i/bookmarks',
     },
     {
         img: < Icon icon={"ri:file-list-2-line"} width='26' height='26' />,
+        fillImg: <Icon icon={"ri:file-list-2-fill"} width='26' height='26' />,
         label: 'Lists',
         link: `i/lists`,
     }

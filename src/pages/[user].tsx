@@ -28,7 +28,7 @@ function User({ user, allUsers, tweets }: Props) {
     const followBtnValue = follow ? 'Following' : 'Follow'
 
     const followToggler = (): void => {
-        setFollow(!user.youFollowing)
+        setFollow(!follow)
     }
 
     const userImgModalBgRef = useRef<HTMLDivElement>(null)
@@ -104,7 +104,7 @@ function User({ user, allUsers, tweets }: Props) {
             document.body.style.overflow = 'initial'
             document.body.style.marginRight = ''
         }
-        if (user.img === "") {
+        if (user.bgImg === "") {
             userBgImgContainerRef.current.style.cursor = "inherit"
         } else {
             userBgImgContainerRef.current.style.cursor = "pointer"
@@ -226,6 +226,12 @@ function User({ user, allUsers, tweets }: Props) {
                             min-height: 140px
                         }
                     }
+                    @media (prefers-color-scheme: dark) {
+                        .userBgImgContainer{
+                            background-color: rgb(51, 54, 57);
+                        }
+                    }
+
                     `}</style>
                     </div>
                     <div className={styles.userBody}>
