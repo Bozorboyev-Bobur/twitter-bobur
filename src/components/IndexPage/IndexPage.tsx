@@ -78,6 +78,15 @@ export const IndexPage: React.FC<IIndexPageProps> = ({
                                 {session ? "Sing out" : "Sign in"}
                             </button>
                         </div>
+                        <div className={styles.indexRightLogInBox}>
+                            Already have an account?
+                            <button tabIndex={0} className={styles.indexRightLogInBtn}
+                                onClick={() => {
+                                    setIsSignInModalOpen(true)
+                                }}>
+                                Sign in (modal)
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ import Link from "next/link"
 import styles from '../../components/SignInModal/SignInModal.module.scss'
 import Router, { useRouter } from 'next/router'
 import classNames from 'classnames'
+import { Icon } from '@iconify/react'
 
 export interface ISignInModalProps {
     isSignInModalOpen: boolean
@@ -23,7 +24,8 @@ export const SignInModal: React.FC<ISignInModalProps> = ({
     const eyeBtnRef = useRef(null)
     const passwordRef = useRef(null)
     // Variables
-    const toggleImgSrc = imgSrc ? '../imgs/SignInModal/eyeLook.svg' : '../imgs/SignInModal/eyeNoLook.svg',
+
+    const toggleImgSrc = imgSrc ? <Icon icon={"charm:eye"} width={24} height={24} color="#1c8cd1" /> : <Icon icon={"charm:eye-slash"} color="#1c8cd1" width={24} height={24} />,
         toggleInputType = inputType ? 'text' : 'password'
     // Functions
     const srcHandler = () => {
@@ -100,8 +102,7 @@ export const SignInModal: React.FC<ISignInModalProps> = ({
                         onClick={
                             srcHandler
                         } >
-                        <img src={toggleImgSrc} alt=""
-                        />
+                        {toggleImgSrc}
                     </button>
                 </div>
 

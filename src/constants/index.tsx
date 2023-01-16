@@ -82,7 +82,7 @@ export const NAVBAR_CONFIG = [
     },
     {
         img: <Icon icon="ri:search-line" width='26' height='26' />,
-        fillImg: <Icon icon={"ri:search-line"} width='26' height='26' />,
+        fillImg: <Icon icon={"fa:search"} width='24' height='24' />,
         label: '',
         link: 'explore',
     },

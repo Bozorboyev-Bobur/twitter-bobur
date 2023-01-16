@@ -11,6 +11,7 @@ $border-color_1: #1DA1F2;
 	margin: 0 auto;
 	height: 100%;
 }
+
 .errorPageMain {
 	max-width: 600px;
 	margin: 0 auto;
@@ -18,12 +19,14 @@ $border-color_1: #1DA1F2;
 	margin-top: 100px;
 	text-align: center;
 }
+
 .errorPageTitle {
 	color: $color_1;
 	margin-bottom: 28px;
 	font-weight: 400;
 	font-size: 15px;
 }
+
 .errorPageBtn {
 	background: #1d9bf0;
 	padding: 0 16px;
@@ -44,16 +47,34 @@ $border-color_1: #1DA1F2;
 	transition: .2s ease-out;
 	outline: none;
 	border: none;
+
 	&:focus {
 		border-color: $border-color_1;
 		background: #1c8cd1;
 	}
+
 	&:hover {
 		background: #1c8cd1;
 	}
 }
+
 @media (prefers-color-scheme: dark) {
 	.errorPageTitle {
 		color: $color_3;
+	}
+}
+
+
+@media only screen and (max-height: 499px) {
+	.errorPageMain {
+		max-width: 600px;
+		width: 100%;
+		position: absolute;
+		top: 100px;
+		left: 50%;
+		transform: translate(-50%, 0);
+		margin: 0 auto;
+		padding: 0 24px;
+		text-align: center;
 	}
 }

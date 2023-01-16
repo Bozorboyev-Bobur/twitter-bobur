@@ -141,4 +141,15 @@ $color_7: #71767b;
     }
 }
 
-@media only screen and (max-width: 499px) {}
+@media only screen and (max-width: 499px) {
+    .messagesContent{
+        border-right: none;
+        border-left: none;
+    }
+}
+
+@media only screen and (max-width: 1004px) and (max-height: 499px) {
+    .messagesContent{
+        margin: 0 auto;
+    }
+}
