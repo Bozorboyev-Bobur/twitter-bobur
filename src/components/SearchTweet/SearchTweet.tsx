@@ -60,7 +60,7 @@ export const SearchTweet = () => {
                                         <li className={styles.searchResultCards} key={user.numId}>
                                             <div tabIndex={0} className={styles.searchResultCard} onClick={() => {
                                                 router.push({
-                                                    pathname: `${user.nick}`
+                                                    pathname: `/${user.nick}`
                                                 });
                                             }}>
                                                 <div className={styles.searchResultDataHeader}>

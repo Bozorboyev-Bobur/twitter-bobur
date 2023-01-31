@@ -25,7 +25,6 @@ function Post({ tweet, tweets: tweetsProp }: Props) {
     const addingTweetModalBgRef = useRef<HTMLDivElement>(null)
     const [isAddingCommentModalOpen, setIsAddingCommentModalOpen] = useState<boolean>(false)
 
-
     useEffect(() => {
         if (isAddingCommentModalOpen) {
             addingTweetModalBgRef.current.style.zIndex = '9989'

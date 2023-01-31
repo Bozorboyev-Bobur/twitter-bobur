@@ -30,8 +30,6 @@ export const NavigationBar = ({ tweets: tweetsProp }: Props) => {
 
     const router = useRouter()
 
-    console.log();
-
     useEffect(() => {
         if (isAddingTweetModalOpen) {
             addingTweetModalBgRef.current.style.zIndex = '999'
